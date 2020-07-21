@@ -1,0 +1,17 @@
+*Single responsibility principle* 
+
+Para evitar esto, debemos separar las responsabilidades de la clase, por lo que podemos crear otra clase que se encargue de las operaciones de la base de datos SQL, y dejar la clase corregida sólo con sus atributos, setters, setters y métodos modificados. 
+
+
+
+*Open/Close principle* 
+
+Para implementar de manera correcta este principio, se debe moificar la declaración de la clase Person y hacerla de tipo abstract. De esta manera, el método isValid() también será declarado como abstract, sin que se le agregue ningún bloque de código. El código de este método será tipeado dentro de las clases hijas que hereden de la superclase Person. Cada clase hija implementará este método según sus requerimientos. 
+
+
+
+*Liskov sustitution principle*
+
+Parecido a la propuesta de solución para el principio Open/Close, se debe dejar declarado un método abstracto dentro de la clase abstracta y ya modificada, Person. 
+
+Dentro de las clases Candidate.JAVA y Employee.JAVA se debe modificar el método para eliminar una persona de la base de datos, y en la implementación podemos indicar que la instancia a eliminar sea un objeto la clase Persona, el cual es más genérico, ya que puede referirse a eliminar de la base de datos ya sea un candidato como también un empleado ya contratado. 
